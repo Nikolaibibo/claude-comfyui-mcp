@@ -1,0 +1,36 @@
+{
+  "name": "comfyui-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for ComfyUI integration with Claude Desktop",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "mcp",
+    "comfyui",
+    "claude",
+    "ai",
+    "image-generation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "axios": "^1.6.0",
+    "form-data": "^4.0.0",
+    "ws": "^8.16.0",
+    "zod": "^3.22.0",
+    "zod-to-json-schema": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/ws": "^8.5.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.3.0"
+  }
+}

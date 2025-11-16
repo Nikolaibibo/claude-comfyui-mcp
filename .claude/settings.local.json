@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm run build:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit: ComfyUI MCP Server v1.0\n\nComplete MCP server implementation for ComfyUI integration with Claude Desktop.\n\nFeatures:\n- 15 MCP tools for complete ComfyUI control\n- Template-based generation (Flux, SD1.5, SDXL, img2img)\n- Custom workflow execution with smart parameter overrides\n- Real-time progress monitoring via WebSocket\n- Extended model management (checkpoints, LoRAs, VAEs, diffusion_models, etc.)\n- Workflow library for saving and reusing workflows\n- Queue management (status, cancel, clear)\n- Image upload/retrieval with full Windows path support\n\n🤖 Generated with Claude Code\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
