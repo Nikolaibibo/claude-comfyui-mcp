@@ -2,6 +2,10 @@
 
 A Model Context Protocol (MCP) server that enables Claude Desktop to interact with your local ComfyUI installation for AI-powered image generation.
 
+<a href="https://glama.ai/mcp/servers/@Nikolaibibo/claude-comfyui-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@Nikolaibibo/claude-comfyui-mcp/badge" alt="ComfyUI Server MCP server" />
+</a>
+
 ## Features
 
 - **15 MCP Tools** for complete ComfyUI control
