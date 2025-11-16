@@ -34,6 +34,10 @@ export interface TemplateConfig {
   default_sampler?: string;
   default_scheduler?: string;
   default_denoise?: number;
+  // Flux-specific options
+  default_unet?: string;
+  default_clip?: string;
+  default_vae?: string;
 }
 
 export const DEFAULT_CONFIG: ServerConfig = {
@@ -53,7 +57,9 @@ export const DEFAULT_CONFIG: ServerConfig = {
   templates: {
     flux_txt2img: {
       enabled: true,
-      default_model: "flux_dev.safetensors",
+      default_unet: "flux1-dev-fp8.safetensors",
+      default_clip: "t5xxl_fp8_e4m3fn_scaled.safetensors",
+      default_vae: "ae.safetensors",
       default_steps: 20,
       default_cfg: 3.5,
       default_sampler: "euler",

@@ -72,3 +72,11 @@ export function isModelLoaderNode(node: any): boolean {
 export function isVAELoaderNode(node: any): boolean {
   return node.class_type === 'VAELoader';
 }
+
+export function isCLIPLoaderNode(node: any): boolean {
+  return ['CLIPLoader', 'DualCLIPLoader'].includes(node.class_type);
+}
+
+export function isLoraLoaderNode(node: any): boolean {
+  return node.class_type === 'LoraLoader';
+}

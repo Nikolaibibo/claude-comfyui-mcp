@@ -9,6 +9,21 @@ export interface WorkflowNode {
 
 export type Workflow = Record<string, WorkflowNode>;
 
+export interface LoraConfig {
+  name: string;
+  strength_model: number;
+  strength_clip: number;
+}
+
+export interface FluxVariantPreset {
+  name: string;
+  model: string;
+  steps: number;
+  cfg: number;
+  sampler: string;
+  scheduler: string;
+}
+
 export interface WorkflowOverrides {
   positive_prompt?: string;
   negative_prompt?: string;
@@ -24,11 +39,9 @@ export interface WorkflowOverrides {
   batch_size?: number;
   model?: string;
   vae?: string;
-  lora?: Array<{
-    name: string;
-    strength_model: number;
-    strength_clip: number;
-  }>;
+  clip?: string;
+  lora?: LoraConfig[];
+  variant?: string;
 }
 
 export interface WorkflowMetadata {
@@ -54,4 +67,9 @@ export interface TemplateOptions {
   denoise?: number;
   batch_size?: number;
   input_image?: string;
+  // Flux-specific options
+  variant?: string;
+  clip?: string;
+  vae?: string;
+  lora?: LoraConfig[];
 }
