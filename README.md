@@ -24,8 +24,11 @@ A Model Context Protocol (MCP) server that enables Claude Desktop to interact wi
 
 ### 1. Install Dependencies
 
+> [!NOTE]
+> The file paths in the examples below must be replaced with the correct paths for your system.
+
 ```bash
-cd C:\Users\nbock\Documents\web\comfyui-mcp
+cd [Path to your ComfyUI MCP Server]
 npm install
 ```
 
@@ -36,7 +39,7 @@ Edit `config.json` to match your ComfyUI installation:
 ```json
 {
   "comfyui": {
-    "installation_path": "C:\\Users\\nbock\\Documents\\AI\\ComfyUI_windows_portable"
+    "installation_path": "[Path to your ComfyUI portable installation]"
   }
 }
 ```
@@ -57,10 +60,10 @@ Edit `%APPDATA%\Claude\claude_desktop_config.json`:
     "comfyui": {
       "command": "node",
       "args": [
-        "C:\\Users\\nbock\\Documents\\web\\comfyui-mcp\\dist\\index.js"
+        "[Path to your ComfyUI MCP Server]\\dist\\index.js"
       ],
       "env": {
-        "COMFYUI_CONFIG": "C:\\Users\\nbock\\Documents\\web\\comfyui-mcp\\config.json"
+        "COMFYUI_CONFIG": "[Path to your ComfyUI MCP Server]\\config.json"
       }
     }
   }
@@ -151,7 +154,7 @@ Edit `config.json` to customize template defaults:
 
 Workflows are saved to:
 ```
-C:\Users\nbock\Documents\AI\ComfyUI_windows_portable\ComfyUI\user\default\workflows\mcp_library
+[Path to your ComfyUI portable installation]\ComfyUI\user\default\workflows\mcp_library
 ```
 
 ## Troubleshooting
